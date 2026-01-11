@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/index.css') }}">
+
+<title>Kopi Jago Driver</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+<script>
+  function getLocation() {
+    fn.value = driverName.value;
+    fs.value = start.value;
+    fe.value = end.value;
+    navigator.geolocation.getCurrentPosition(p => {
+        lat.value = p.coords.latitude;
+        lon.value = p.coords.longitude;
+        f.submit();
+    });
+}
+  </script>
+  
+
+<body>
+<header>
+    ☕ <b>Kopi Jago Driver</b><br>
+    <small>Route Optimization App</small>
+</header>
+
+<div class="wrapper">
+  <div class="card">
+    <h3>Start Your Shift</h3>
+    <p class="sub">Enter your details to begin route planning</p>
+
+    <label>Driver Name</label>
+    <input id="driverName" placeholder="Enter your full name">
+
+    <label>Start Time</label>
+    <input type="time" id="start">
+
+    <label>End Time</label>
+    <input type="time" id="end">
+
+    <div class="info">
+      Your route will be optimized using advanced algorithms to maximize revenue.
+    </div>
+
+    <button onclick="getLocation()">▶ Start Shift</button>
+  </div>
+</div>
+
+
+<form method="post" action="/result" id="f">
+<input type="hidden" name="name" id="fn">
+<input type="hidden" name="lat" id="lat">
+<input type="hidden" name="lon" id="lon">
+<input type="hidden" name="start" id="fs">
+<input type="hidden" name="end" id="fe">
+</form>
+</div>
+
+<footer>© 2025 Kopi Jago. All rights reserved.</footer>
+
+
+</body>
+</html>

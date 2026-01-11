@@ -1,0 +1,100 @@
+:root {
+    --brown:#7a5636;
+    --bg:#f7f4f1;
+    --card:#ffffff;
+    --muted:#6b6b6b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin:0;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, Arial;
+    background: var(--bg);
+}
+
+header {
+    background: var(--brown);
+    color: #fff;
+    padding: 18px 12px;
+    text-align: center;
+}
+
+.wrapper {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.card {
+    background: var(--card);
+    width: 100%;
+    max-width: 420px;
+    padding: 28px;
+    border-radius: 18px;
+    box-shadow: 0 16px 32px rgba(0,0,0,.08);
+}
+
+.card h3 {
+    margin: 0 0 6px;
+    font-size: 22px;
+}
+
+.card p.sub {
+    margin: 0 0 22px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    height: 48px;
+    padding: 0 14px;
+    margin-bottom: 18px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--brown);
+}
+
+.info {
+    background: #f3efe9;
+    padding: 14px 16px;
+    border-radius: 12px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+button {
+    width: 100%;
+    height: 52px;
+    border-radius: 14px;
+    border: none;
+    background: var(--brown);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    padding: 12px 0 20px;
+}

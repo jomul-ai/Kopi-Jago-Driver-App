@@ -1,0 +1,52 @@
+<html></html>
+<head>
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/navigate.css') }}">
+<title>Navigation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+
+<body>
+
+<header>
+☕ <b>Kopi Jago Driver</b><br>
+<small>Route Navigation</small>
+</header>
+
+<div class="map">
+    <div class="marker">
+        <div class="coffee">☕</div>
+        <div class="label">{{ stop }}</div>
+        <div class="pin">📍</div>
+        <div class="label">Current Location</div>
+    </div>
+</div>
+
+<div class="panel">
+    <h3>{{ stop }}</h3>
+    <p>📐 {{ 36 }} km &nbsp;&nbsp; ⏱️ {{ 25 }} min</p>
+
+    <div class="actions">
+        <a class="btn primary"
+           href="https://www.google.com/maps/dir/?api=1&destination={{ lat }},{{ lon }}"
+           target="_blank">
+            🧭 Start Navigation
+        </a>
+
+        <button class="btn secondary" onclick="history.back()">← Back</button>
+    </div>
+
+    <div class="note">
+        This is a simulated navigation page.  
+        In production, this would integrate with Google Maps or Apple Maps.
+    </div>
+</div>
+
+<footer>
+© 2025 Kopi Jago. All rights reserved.
+</footer>
+
+</body>
+</html>
