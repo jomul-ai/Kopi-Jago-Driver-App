@@ -25,7 +25,7 @@ This project is developed as an algorithm and optimization case study.
 ---
 ## Running the Program
 - Open in browser: http://127.0.0.1:5000
-- Location access must be enabled.
+- Location access must be enabled
 
 ---
 
